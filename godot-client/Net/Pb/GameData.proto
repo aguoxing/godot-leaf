@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "LeafClient";
+
+package pb;
+
+message PlayerRequest {
+  string playerId = 1;
+  string playerName = 2;
+  Velocity vel = 3;
+  
+}
+
+message PlayerResponse {
+  string playerId = 1;
+  string playerName = 2;
+  Velocity vel = 3;
+  string msg = 4;
+}
+
+message Velocity {
+  float x = 1;
+  float y = 2;
+}
+
+message PlayerInfo {
+  string playerId = 1;
+  int32 x = 2;
+  int32 y = 3;
+}
+
+message NewGame {
+  string roomId = 1;
+  string playerId = 2;
+}
+
+message StartGame {
+  string roomId = 1;
+  repeated PlayerInfo playerList= 2;
+}
+
+message ExitGame {
+  string roomId = 1;
+  string playerId = 2;
+}

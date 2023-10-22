@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://buxgw3j2wnp32"]
+
+[ext_resource type="Script" path="res://Autolaod/ServerManager.cs" id="1_6xn1n"]
+
+[node name="ServerManager" type="Node"]
+script = ExtResource("1_6xn1n")
